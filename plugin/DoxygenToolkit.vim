@@ -362,6 +362,20 @@ if exists("g:DoxygenToolkit_commentType")
     let g:DoxygenToolkit_startCommentBlock = "// "
     let g:DoxygenToolkit_interCommentBlock = "// "
     let g:DoxygenToolkit_endCommentBlock = ""
+  elseif ( g:DoxygenToolkit_commentType == "Qt" )
+    let g:DoxygenToolkit_startCommentTag = "/*! "
+    let g:DoxygenToolkit_interCommentTag = "* "
+    let g:DoxygenToolkit_endCommentTag = "*/"
+    let g:DoxygenToolkit_startCommentBlock = "// "
+    let g:DoxygenToolkit_interCommentBlock = "// "
+    let g:DoxygenToolkit_endCommentBlock = ""
+    let g:DoxygenToolkit_briefTag_pre = "\\brief "
+    let g:DoxygenToolkit_paramTag_pre="\\param "
+    let g:DoxygenToolkit_briefTag_funcName = "yes"
+    let g:DoxygenToolkit_briefTag_className = "yes"
+    let g:DoxygenToolkit_briefTag_structName = "yes"
+    let g:DoxygenToolkit_briefTag_enumName = "yes"
+    let g:DoxygenToolkit_briefTag_namespaceName = "yes"
   else
     let g:DoxygenToolkit_commentType = "C"
   endif
